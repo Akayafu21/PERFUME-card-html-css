@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream : hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%); 
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    outline: hsl(158, 36%, 37%) solid 1px;
+
+}
+
+body {
+    background-color: var(--Cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    height: 600px;
+    width: 800px;
+    margin: 0 auto;
+    background-color: var(--White);
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+
+}
+
+.img {
+    width: 50%;
+    border: none;
+    background-image: url(../images/image-product-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* .img img {
+    width: 100%;
+    object-fit: cover;
+} */
+
+.text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+}
+
+.text h4{
+    color: var(--Dark-grayish-blue);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.text h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+}
+
+.text p{
+    color: var(--Dark-grayish-blue);
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.prize {
+    display: flex;  
+    margin-bottom: 2rem;
+}
+.prize h2 {
+    font-family: 'Fraunces',serif;
+    font-size: 3.5rem;
+    color: var(--Dark-cyan);
+}
+
+.prize > p{
+    text-decoration:line-through;
+    margin: auto 0;
+    margin-left: 1.5rem;
+}
+
+button {
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    display: flex;
+    border: none;
+    border-radius: 12px;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+    transition-duration: .4s;
+    
+}
+
+button:hover{
+    background-color: var(--Very-dark-blue);
+}
+
+
+button img {
+    padding: 5px;
+}
+
+@media only screen and (max-width: 600px){
+    .main {
+        width: 540px;
+        flex-direction: column;
+        margin: 0 2rem;
+        height: fit-content;
+    }
+    .img{
+        width: 100%;   
+        background-image: url(../images/image-product-mobile.jpg);
+        height: 20rem;     }
+    .text {
+        height: 70%;
+        width: 100%;
+    }
+}
+
+
